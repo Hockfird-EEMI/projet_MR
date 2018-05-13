@@ -12,6 +12,7 @@
         <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     </head>
+    <!-- blob -->
     <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0" >
         <header class="col" id="h">
             <?php include("navbar.php");?>
