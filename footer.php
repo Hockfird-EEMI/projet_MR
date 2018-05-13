@@ -4,7 +4,7 @@
             <ul>
                 <li><a href="Plandusite.php">Plan du site</a></li>
                 <li><a href="partenaires.php">Partenaires</a></li>
-                <li><a href="Mentionslégales.php">Mentions légales</a></li>
+                <li><a href="Mentionlegales.php">Mentions légales</a></li>
             </ul>
         </div>
         <div class="l4 m3 s12 col retour">

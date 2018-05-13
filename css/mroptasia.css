@@ -118,7 +118,7 @@ aside {
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        background-color: black;
+        background-color: #8da7be;
         color: white;
         z-index: 999;
         width: 200px;
@@ -135,7 +135,6 @@ aside a img {
     width: 50px;
     height: 50px;
     margin: 10px 0;
-    background-color: white;
 }
 .mobile .material-icons {
     position: absolute;
@@ -220,7 +219,64 @@ h2 {
     position: relative;
     z-index: 1;
 }
-/*qui sommes nous*/
+
+#arrow{
+    margin-bottom: 20px;
+
+}
+#arrow i{
+    font-size: 2rem;
+}
+
+.scroll-down {
+    opacity: 1;
+    -webkit-transition: all .5s ease-in 3s;
+    transition: all .5s ease-in 3s;
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    margin-left: -16px;
+    z-index: 2;
+    -webkit-animation: bounce 2s infinite 2s;
+    animation: bounce 2s infinite 2s;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+
+.scroll-down:before {
+    position: absolute;
+    top: calc(50% - 8px);
+    left: calc(50% - 6px);
+    transform: rotate(-45deg);
+}
+
+@keyframes bounce {
+    0%,
+    100%,
+    20%,
+    50%,
+    80% {
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+    40% {
+        -webkit-transform: translateY(-10px);
+        -ms-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+    60% {
+        -webkit-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+        transform: translateY(-5px);
+    }
+}
+
+
+/----------*qui sommes nous-------*/
 #qn{
     align-items: center;
     width: 100vw;
@@ -302,6 +358,26 @@ background-color: #1d3461;
 .MR h3{
     background: linear-gradient(150deg,#8da7be 15%,#1d3461 70%,#1d3461 85%);
 }
+.bounceInLeft {
+    animation-name: bounceInLeft;
+}
+
+@keyframes bounceInRight {
+    from, 60%, 75%, 90%, to {
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+}
+.bounceInRight {
+    animation-name: bounceInRight;
+}
+
+@keyframes bounceInUp {
+    from, 60%, 75%, 90%, to {
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+}
+
+
 footer img{
     width: 50px;
     height: 50px;
@@ -329,6 +405,7 @@ footer img{
 .art{
     padding: 5px;
 }
+
 
 /*-----------------footer----------*/
 
@@ -480,6 +557,10 @@ input:focus, textarea:focus, select:focus{
     text-align-last: center;
     margin-bottom: 50px;
 }
+#Inv img{
+    width: 500px;
+    height: 300px;
+}
 
 /*------------------articles-----------------------*/
 #main-article{
@@ -520,6 +601,19 @@ input:focus, textarea:focus, select:focus{
 .article h4{
     margin: 0;
     padding: 0;
+}
+
+button{
+    margin: 0;
+    background: linear-gradient(150deg,#8da7be 15%,#1d3461 70%,#1d3461 85%);
+    border: 1px solid #fb3640;
+    color: white;
+    width: 100%;
+    height: 40px;
+}
+#main-article button a{
+    color: white;
+    text-decoration: none;
 }
 /*------------------nos valeurs-----------------------*/
 
@@ -594,6 +688,81 @@ section a {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+}
+
+
+/*---------------partenaires--------------------*/
+
+#partenaires{
+    align-items: center;
+    width: 100vw;
+    max-width: 100%;
+    padding: 0!important;
+    margin-top: 0!important;
+    margin: 0;
+    background-color: white;
+}
+
+#PAR{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+
+    background: linear-gradient(180deg,#8da7be 15%,#1d3461 95%,#1d3461 85%);
+    height: 500px;
+    width: 70vw;
+    margin-bottom: 20px;
+}
+section div ul li  {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+section ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+section a{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+/*-------mentionslegales--------*/
+.rowm {
+    display: flex;
+    flex-direction: row;
+}
+#ML {
+    align-items: center;
+    width: 100vw;
+    max-width: 100%;
+    padding: 0!important;
+    margin-top: 0!important;
+    margin: 0;
+}
+
+#mentionslegales {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    width: 70vw;
+}
+
+section p a {
+    font-weight: 700;
+    color: #fb3640;
 }
 .l1 {
     width: calc((1 * 100% / 12) - 20px);
@@ -771,6 +940,9 @@ section a {
     #Inv{
         height: 100vh;
     }
+    #Inv img {
+    display: none;
+    }
 
     /* nos valeurs */
     #Nosvaleurs {
@@ -790,7 +962,7 @@ section a {
     }
     .article{
         height: 70vh;
-        margin: 10px;
+        margin: 30px;
     }
     #image1{
         display: none;
@@ -800,6 +972,27 @@ section a {
     }
     #image3{
         display: none;
+    }
+
+    /*----partenaires*/
+
+    section ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #eemi {
+        width: 250px;
+        height: 150px;
+    }
+    section div ul li a > img:last-child {
+        width: 200px;
+        height: 200px;
+    }
+    footer .fa-chevron-circle-up{
+    display: none;
     }
         .s1 {
             width: calc((1 * 100% / 12) - 20px);

@@ -53,6 +53,10 @@
 				
 			</div>
 		</section>
+        <section>
+            <button><a href="Dossier de Presse.pdf">Télécharger le dossier de presse</a></button>
+        </section>
+
 	</main>
 	<?php include("footer.php"); ?>
     <script type="text/javascript" src="js/mroptasia.js"></script>

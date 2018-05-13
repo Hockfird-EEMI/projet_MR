@@ -16,7 +16,7 @@
     <i class="material-icons">menu</i>
     <aside>
         <ul>
-            <li><a href="index.php"><img src="img/Logo-blanc-fondNoir.jpg" alt="MROptasia"></a></li>
+            <li><a href="index.php"><img src="img/logo-noir.png" alt="MROptasia"></a></li>
             <li><a href="Investisseurs.php">Investisseurs</a></li>
             <li><a href="articles.php">Actualités</a></li>
             <li><a href="NosValeurs.php">Nos valeurs</a></li>

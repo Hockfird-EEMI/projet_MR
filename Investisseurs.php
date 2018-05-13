@@ -27,6 +27,7 @@
                 </p>
 
             </div>
+            <div><img src="img/cours immersion.png"> </div>
         </section>
     </main>
     <?php include("footer.php"); ?>

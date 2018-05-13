@@ -9,18 +9,17 @@
         <link rel="stylesheet" type="text/css" href="css/mroptasia.css" />
         <link rel="stylesheet" type="text/css" href="css/hover-min.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     </head>
-    <body>
+    <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0" >
         <header class="col" id="h">
             <?php include("navbar.php");?>
             <form method="post" action="#">
                 <input type="search" name="search" id="search" required placeholder="Dernières actualités" />
                 <input type="submit" value="Rechercher" />
             </form>
-            <div>
-                
-            </div>
+            <div id="arrow"><a href="#" class="scroll-down"><i class="material-icons">expand_more</i></a></div>
         </header>
         <main>
             <section class="col" id="qn">
@@ -35,7 +34,7 @@
             </section>
             <div class="row" id="tetes">
                 <div class="container row">
-                    <div class="row">
+                    <div class="row aos-init aos-animate" data-aos="fade-left" data-aos-duration="1500">
                     <div class="gars col  align-center">
                         <div class="tete hvr-grow" id="arthur"></div>
                         <p>Arthur</p>
@@ -45,7 +44,7 @@
                         <p>Hannah</p>
                     </div>
                     </div>
-                    <div class="row">
+                    <div class="row aos-init aos-animate" data-aos="fade-right" data-aos-duration="1500">
                     <div class="gars col  align-center">
                         <div class="tete hvr-grow" id="balt"></div>
                         <p>Balthazar</p>
@@ -60,7 +59,7 @@
             <section class="col align-center" id="dif">
                 <h2 class="titre"><span>Quelle différence</span></h2>
                 <div id="type" class="row">
-                    <div class="AR R s12 m4 l4">
+                    <div class="AR R s12 m4 l4 aos-init aos-animate" data-aos="zoom-in" data-aos-duration="1500" >
                         <h3>AR</h3>
                         <div>
                             <p>
@@ -68,7 +67,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="MR R s12 m4 l4">
+                    <div class="MR R s12 m4 l4 aos-init aos-animate" data-aos="zoom-in" data-aos-duration="1500">
                         <h3>MR</h3>
                         <div>
                             <p>
@@ -76,7 +75,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="VR R s12 m4 l4">
+                    <div class="VR R s12 m4 l4 aos-init aos-animate" data-aos="zoom-in" data-aos-duration="1500">
                         <h3>VR</h3>
                         <div>
                             <p>
@@ -88,26 +87,27 @@
             </section>
             <section class="col align-center" id="actu">
                 <h2 class="titre"><span>Actualité</span></h2>
-                <div class="row">
+                <div class="row aos-init aos-animate" data-aos="fade-down" data-aos-duration="1500">
                     <div class="l6 s11 m6">
                         <h3>Comment la VR/AR participent à l'amélioration de l’expérience utilisateur?</h3>
-                        <p>L’expérience utilisateur (redirige vers l’article 2) ou UX (User Interface)  est essentielle au sein du web, elle participe activement au “virtual reality business” tout comme “l’augmented reality business”...
-                        </p>
+                        <p>L’expérience utilisateur ou UX (User Interface)  est essentielle au sein du web, elle participe activement au “virtual reality business” tout comme “l’augmented reality business”.
+                            Nous ne nous en rendons pas compte mais l’UX devient un facteur important...</p>
                     </div>
                     <div class="l1 m1 s1">
                         <a href="#"><i class="fas fa-plus-circle"></i></a>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row aos-init aos-animate" data-aos="fade-right" data-aos-duration="1500">
                     <div class="l6 s11 m6">
                         <h3>Qu’est-ce que la réalité augmentée (AR)?</h3>
-                        <p>La réalité augmentée(redirige vers qui sommes-nous) est la superposition d’éléments (il peut s’agir du son, d’images en 2D ou 3D) calculée par un système informatique en temps réel...</p>
+                        <p>La réalité augmentée est la superposition d’éléments (il peut s’agir du son, d’images en 2D ou 3D) calculée par un système informatique en temps réel.
+                            Il est possible d’incruster des objets virtuels dans une séquence d’image...</p>
                     </div>
                     <div class="l1 m1 s1">
                         <a href="#"><i class="fas fa-plus-circle"></i></a>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">
                     <div class="l6 s11 m6">
                         <h3>L’AR a un futur prometteur</h3>
                         <p>Vous le savez sûrement, l’AR est un système qui va révolutionner le monde. Les médecins vont pouvoir apprendre l’anatomie non plus sur des livres mais en visualisant des corps en AR en 3D ce qui leur permettra de...</p>
@@ -119,7 +119,17 @@
                 
             </section>
         </main>
+        <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
         <script type="text/javascript" src="js/mroptasia.js"></script>
+        <script type="text/javascript" src="js/scroll.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <script>
+            AOS.init({
+                disable: 'mobile'
+            });
+        </script>
         <?php include("footer.php"); ?>
     </body>
 </html>
